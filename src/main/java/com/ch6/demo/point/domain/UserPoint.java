@@ -33,6 +33,13 @@ public class UserPoint {
         this.balance += amount;
     }
 
+    public void pay(int amount) {
+        if (balance < amount) {
+            throw new IllegalStateException("Insufficient point balance.");
+        }
+        this.balance -= amount;
+    }
+
     public Long getUserId() {
         return userId;
     }
