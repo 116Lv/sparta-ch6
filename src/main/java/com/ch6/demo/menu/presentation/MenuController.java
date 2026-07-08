@@ -19,4 +19,9 @@ public class MenuController {
     public MenuResponse getMenus() {
         return MenuResponse.from(menuService.getMenus());
     }
+
+    @GetMapping("/popular")
+    public PopularMenuResponse getPopularMenus() {
+        return PopularMenuResponse.from(menuService.getPopularMenus());
+    }
 }
